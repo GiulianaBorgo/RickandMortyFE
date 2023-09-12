@@ -4,12 +4,13 @@ import { useAppSelector } from '../../store';
 import { Character } from '../../store/character/slice';
 
 /**
- * Grilla de personajes para la pagina de inicio
- * 
- * Deberás agregar las funciones necesarias para mostrar y paginar los personajes
- * 
- * 
- * @returns un JSX element 
+ * Componente de grilla de personajes para la página de inicio.
+ *
+ * Este componente muestra una grilla de personajes y puede manejar la paginación y la visualización de personajes filtrados.
+ *
+ * @component
+ * @param {Character[]} props.filteredCharacters - Un array de personajes filtrados que se mostrarán en la grilla.
+ * @returns {JSX.Element} - Elemento JSX que representa la grilla de personajes.
  */
 const  GrillaPersonajes: React.FC<{ filteredCharacters: Character[] }> = ({ filteredCharacters })=> {
     const { isLoading, isError } = useAppSelector((state) => state.characters)

@@ -5,18 +5,19 @@ import BotonFavorito from '../botones/boton-favorito.componente';
 import './tarjeta-personaje.css';
 
 /**
- * Tarjeta para cada personaje dentro de la grilla de personajes. 
- * 
- * Deberás agregar las propiedades necesarias para mostrar los datos de los personajes
- * 
- * 
- * @returns un JSX element 
+ * Tarjeta que muestra la información de un personaje y permite agregarlo o quitarlo de favoritos.
+ *
+ * @component
+ * @param {Object} character - Los datos del personaje a mostrar.
+ * @param {string} character.image - La URL de la imagen del personaje.
+ * @param {string} character.name - El nombre del personaje.
+ * @returns {JSX.Element} - Elemento JSX que representa la tarjeta del personaje.
  */
+
 export interface TarjetaPersonajeProps  {
     character: Character;
-    customkey?: number;
 };
-const TarjetaPersonaje = ({ character, customkey }: TarjetaPersonajeProps) => {
+const TarjetaPersonaje = ({ character }: TarjetaPersonajeProps) => {
 
     const dispatch = useAppDispatch()
     const {favs} = useAppSelector((state) => state.fav)

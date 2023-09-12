@@ -8,8 +8,9 @@ import './paginacion.css';
  * 
  * Deberás agregar las propiedades necesarias para que funcione correctamente
  * 
- * 
- * @returns un JSX element 
+ * @component
+ * @param {number} - Número de página actual.
+ * @returns {JSX.Element} - Elemento JSX que muestra los botones de paginación anterior y siguiente.
  */
 
 interface PaginacionProps {

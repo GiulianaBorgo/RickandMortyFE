@@ -10,8 +10,10 @@ import { DELETE_ALL_FAVS } from "../store/fav/slice";
  * Uso: 
  * ``` <PaginaFavoritos /> ```
  * 
- * @returns la pagina de favoritos
+ * @component
+ * @returns {JSX.Element} - Elemento JSX que representa la página de favoritos.
  */
+
 const PaginaFavoritos = () => {
     const dispatch = useAppDispatch()
     const { favs } = useAppSelector((state) => state.fav);

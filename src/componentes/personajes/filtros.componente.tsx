@@ -5,14 +5,19 @@ import './filtros.css';
 
 const Filtros = () => {
     const dispatch = useAppDispatch();
-    const filterValue = useAppSelector((state) => state.characters.filterValue);
-
+    const filterValue = useAppSelector((state) => state.characters.filterValue)
+    
+    /**
+   * Maneja el cambio en el campo de filtro de nombre y despacha acciones para actualizar el filtro y cargar los personajes filtrados.
+   *
+   * @param {React.ChangeEvent<HTMLInputElement>} e - El evento de cambio del campo de entrada.
+   */
+  
     const handleFilterChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         dispatch(setFilterValue(e.target.value));
         dispatch(() => dispatch(GET_CHARACTERS({ param: 'name', value: e.target.value }))
         )
-
-    };
+    }
 
     return (
         <>
